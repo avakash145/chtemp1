@@ -8,7 +8,7 @@ from nltk.corpus import stopwords
 nltk.download('punkt')
 nltk.download('stopwords')
 ps=PorterStemmer()
-logs_dir='../logs'
+logs_dir='logs'
 os.makedirs(logs_dir,exist_ok=True)
 logger=logging.getLogger('transforms')
 logger.setLevel('DEBUG')
@@ -41,8 +41,8 @@ def main(text_column='text',target_column='target'):
     """transforms the input text column and returns the transformed dataframe"""
     try:
         # fetch the data from the dataingested dir 
-        train_path='../data/raw/train.csv'
-        test_path='../data/raw/test.csv'
+        train_path='data/raw/train.csv'
+        test_path='data/raw/test.csv'
         td=pd.read_csv(train_path,encoding='latin')
         ted=pd.read_csv(test_path,encoding='latin')
         logger.info("data loaded from %s and %s",train_path,test_path)
@@ -50,7 +50,7 @@ def main(text_column='text',target_column='target'):
         # transform the text column in both train and test data
         td['text']=td.text.apply(transform_text)
         ted['text']=ted.text.apply(transform_text)
-        datapath='../data/transformed'
+        datapath='data/transformed'
         os.makedirs(datapath,exist_ok=True)
         td.to_csv(os.path.join(datapath, 'train_transformed.csv'), index=False)
         ted.to_csv(os.path.join(datapath, 'test_transformed.csv'), index=False)

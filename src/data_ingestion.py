@@ -4,7 +4,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 lblencoder=LabelEncoder()
-logs_dir='../logs'
+logs_dir='logs'
 os.makedirs(logs_dir, exist_ok=True)
 
 logger=logging.getLogger('data_ingestion')
@@ -70,12 +70,12 @@ def save_data(train_data:pd.DataFrame,test_data:pd.DataFrame,data_path:str)->Non
 def main():
     try:
         test_size=0.2
-        data_path='../experiments/spam.csv'
+        data_path='experiments/spam.csv'
         # df=load_data(data_url=data_path)  where data path is the url to the data 
         df=load_data(data_path)
         df=preprocess_data(df)
         train_data,test_data=train_test_split(df,test_size=0.2,random_state=2)
-        save_data(train_data,test_data,"../data")
+        save_data(train_data,test_data,"data")
     except Exception as e:
         logger.error(f"Failed to complete the data ingestion process : {e}")
         print(f"Error {e}")

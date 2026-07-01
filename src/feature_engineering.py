@@ -3,7 +3,7 @@ import os
 import logging 
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-logs_dir='../logs'
+logs_dir='logs'
 os.makedirs(logs_dir, exist_ok=True)
 
 logger=logging.getLogger('feature_engineering')
@@ -78,13 +78,13 @@ def save_data(df:pd.DataFrame,file_path:str)->None:
 def main():
     try:
         max_features=80
-        train_path='../data/transformed/train_transformed.csv'
-        test_path='../data/transformed/test_transformed.csv'
+        train_path='data/transformed/train_transformed.csv'
+        test_path='data/transformed/test_transformed.csv'
         train_data=load_data(train_path)
         test_data=load_data(test_path)
         train_df,test_df=apply_tfidf(train_data,test_data,max_features)
-        save_data(train_df,'../data/feature_engineered/train_feature_engineered.csv')
-        save_data(test_df,'../data/feature_engineered/test_feature_engineered.csv')
+        save_data(train_df,'data/feature_engineered/train_feature_engineered.csv')
+        save_data(test_df,'data/feature_engineered/test_feature_engineered.csv')
     except Exception as e:
         logger.error("Failed to complete the feature engineering process: %s", str(e))
         print(f"Error: {e}")

@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import pickle
 import logging
 from sklearn.ensemble import RandomForestClassifier 
-log_dir="../logs"
+log_dir="logs"
 
 
 logger = logging.getLogger("model_training")
@@ -72,8 +72,8 @@ def save_model(model:RandomForestClassifier, file_path:str):
 def main():
     try:
         params={'n_estimators': 26,'random_state': 2}
-        train_data_path = "../data/feature_engineered/train_feature_engineered.csv"
-        model_save_path = "../models/random_forest_model.pkl"
+        train_data_path = "data/feature_engineered/train_feature_engineered.csv"
+        model_save_path = "models/random_forest_model.pkl"
         train_data = load_data(train_data_path)
         x_train =train_data.drop(columns=['target']).values
         y_train = train_data['target'].values

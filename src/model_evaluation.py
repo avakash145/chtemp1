@@ -7,7 +7,7 @@ import pickle
 import json
 
 
-logs_dir="../logs"
+logs_dir="logs"
 logger=logging.getLogger("model_evaluation")
 logger.setLevel(logging.DEBUG)
 
@@ -75,8 +75,8 @@ def evaluate_model(model, X_test:np.ndarray, y_test:np.ndarray)->dict:
 
 def main():
     try:
-        model_path = "../models/random_forest_model.pkl"
-        test_data_path = "../data/feature_engineered/test_feature_engineered.csv"
+        model_path = "models/random_forest_model.pkl"
+        test_data_path = "data/feature_engineered/test_feature_engineered.csv"
         model = load_model(model_path)
         test_data = load_data(test_data_path)
         X_test = test_data.drop("target", axis=1).values
@@ -84,7 +84,7 @@ def main():
         
         evaluation_results = evaluate_model(model, X_test, y_test)
         
-        results_path = "../results/evaluation_results.json"
+        results_path = "results/evaluation_results.json"
         os.makedirs(os.path.dirname(results_path), exist_ok=True)
         with open(results_path, 'w') as f:
             json.dump(evaluation_results, f, indent=4)
