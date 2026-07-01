@@ -1,0 +1,5 @@
+building pipeling 
+1. create a git repo and clone it in local (add experiments)
+2. add source folder along with all components(run them individually)
+3. ADD data ,model , repo dir to .gitignore file 
+4. now git add commit push

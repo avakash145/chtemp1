@@ -1,0 +1,23 @@
+ml pipeline 
+
+components:
+1.Data Ingestion
+2.Data validation 
+3.pre-processing 
+1-3-in file as (data_ingestion) 
+4.Feature Eng
+5.Model training 
+6.model evaluation 
+
+
+Data science:
+1.pre-processing 
+2.feature engineering
+3.model hypertuning 
+4. Grid search etc 
+
+mlops practice 
+1.coding practices
+2.robust pipeline
+3.experiments
+4.AWS, Yaml, etcf

@@ -1,0 +1,5 @@
+2026-07-01 16:55:44,673 - model_evaluation - DEBUG - Model loaded successfully from ../models/random_forest_model.pkl
+2026-07-01 16:55:44,686 - model_evaluation - DEBUG - Data loaded successfully from ../data/feature_engineered/test_feature_engineered.csv
+2026-07-01 16:55:44,690 - model_evaluation - DEBUG - Starting model evaluation on 1034 samples
+2026-07-01 16:55:44,723 - model_evaluation - INFO - Model evaluation completed successfully with accuracy: 0.9555125725338491, ROC AUC: 0.9597809912008282
+2026-07-01 16:55:44,726 - model_evaluation - DEBUG - Evaluation results saved successfully to ../results/evaluation_results.json

@@ -1,0 +1,4 @@
+2026-07-01 15:41:44,819 - transforms - INFO - data loaded from ../data/raw/train.csv and ../data/raw/test.csv
+2026-07-01 15:43:07,704 - transforms - INFO - text column transformed in both train and test data and saved to ../data/transformed
+2026-07-01 15:44:28,245 - transforms - INFO - data loaded from ../data/raw/train.csv and ../data/raw/test.csv
+2026-07-01 15:45:28,756 - transforms - INFO - text column transformed in both train and test data and saved to ../data/transformed

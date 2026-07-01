@@ -1,0 +1,7 @@
+2026-07-01 16:42:55,680 - model_training - ERROR - File not found: ../data/features_engineered/train_feature_engineered.csv
+2026-07-01 16:42:55,680 - model_training - ERROR - Error in main execution: [Errno 2] No such file or directory: '../data/features_engineered/train_feature_engineered.csv'
+2026-07-01 16:43:37,664 - model_training - INFO - Data loaded successfully from ../data/feature_engineered/train_feature_engineered.csv
+2026-07-01 16:43:37,672 - model_training - DEBUG - Initializing RandomForestClassifier with parameters: {'n_estimators': 26, 'random_state': 2}
+2026-07-01 16:43:37,673 - model_training - DEBUG - Starting model training with 4135 samples
+2026-07-01 16:43:37,831 - model_training - INFO - Model training completed successfully
+2026-07-01 16:43:37,836 - model_training - DEBUG - Model saved successfully to ../models/random_forest_model.pkl

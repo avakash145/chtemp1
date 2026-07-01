@@ -1,0 +1,19 @@
+2026-07-01 16:06:54,108 - feature_engineering - DEBUG - Data loaded from ../data/transformed/train_transformed.csv
+2026-07-01 16:06:54,113 - feature_engineering - DEBUG - Data loaded from ../data/transformed/test_transformed.csv
+2026-07-01 16:06:54,232 - feature_engineering - ERROR - Error occurred while applying TF-IDF vectorization: name 'text_column' is not defined
+2026-07-01 16:06:54,232 - feature_engineering - ERROR - Failed to complete the feature engineering process: name 'text_column' is not defined
+2026-07-01 16:07:35,971 - feature_engineering - DEBUG - Data loaded from ../data/transformed/train_transformed.csv
+2026-07-01 16:07:35,975 - feature_engineering - DEBUG - Data loaded from ../data/transformed/test_transformed.csv
+2026-07-01 16:07:36,108 - feature_engineering - DEBUG - TF-IDF vectorization applied to text column
+2026-07-01 16:07:36,115 - feature_engineering - ERROR - Error occurred while saving the data: Cannot save file into a non-existent directory: '..\data\feature_engineered'
+2026-07-01 16:07:36,115 - feature_engineering - ERROR - Failed to complete the feature engineering process: Cannot save file into a non-existent directory: '..\data\feature_engineered'
+2026-07-01 16:08:34,859 - feature_engineering - DEBUG - Data loaded from ../data/transformed/train_transformed.csv
+2026-07-01 16:08:34,863 - feature_engineering - DEBUG - Data loaded from ../data/transformed/test_transformed.csv
+2026-07-01 16:08:34,957 - feature_engineering - DEBUG - TF-IDF vectorization applied to text column
+2026-07-01 16:08:36,610 - feature_engineering - DEBUG - Data saved to ../data/feature_engineered/train_feature_engineered.csv
+2026-07-01 16:08:37,013 - feature_engineering - DEBUG - Data saved to ../data/feature_engineered/test_feature_engineered.csv
+2026-07-01 16:23:18,959 - feature_engineering - DEBUG - Data loaded from ../data/transformed/train_transformed.csv
+2026-07-01 16:23:18,963 - feature_engineering - DEBUG - Data loaded from ../data/transformed/test_transformed.csv
+2026-07-01 16:23:19,030 - feature_engineering - DEBUG - TF-IDF vectorization applied to text column
+2026-07-01 16:23:19,224 - feature_engineering - DEBUG - Data saved to ../data/feature_engineered/train_feature_engineered.csv
+2026-07-01 16:23:19,272 - feature_engineering - DEBUG - Data saved to ../data/feature_engineered/test_feature_engineered.csv
