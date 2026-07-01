@@ -75,7 +75,7 @@ def evaluate_model(model, X_test:np.ndarray, y_test:np.ndarray)->dict:
 
 def main():
     try:
-        model_path = "models/random_forest_model.pkl"
+        model_path = "models/model.pkl"
         test_data_path = "data/feature_engineered/test_feature_engineered.csv"
         model = load_model(model_path)
         test_data = load_data(test_data_path)
