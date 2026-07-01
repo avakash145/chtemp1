@@ -39,7 +39,6 @@ def load_data(data_path: str) -> pd.DataFrame:
     except Exception as e:
         logger.error("Unexpected error while loading the data: %s", str(e))
         raise
-    
 def apply_tfidf(train_data: pd.DataFrame, test_data: pd.DataFrame, max_features:int) ->tuple:
     """Apply TF-IDF vectorization to the text column of train and test data."""
     try:

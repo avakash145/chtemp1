@@ -1,0 +1,43 @@
+stages:
+  data_ingestion:
+    cmd: python src/data_ingestion.py
+    deps:
+      - src/data_ingestion.py
+      - experiments/spam.csv
+    outs:
+      - data/raw/test.csv
+      - data/raw/train.csv
+  transform:
+    cmd: python src/transform.py
+    deps:
+      - src/transform.py
+      - data/raw/test.csv
+      - data/raw/train.csv
+    outs:
+      - data/transformed/test_transformed.csv
+      - data/transformed/train_transformed.csv
+  feature_engineering:
+    cmd: python src/feature_engineering.py
+    deps:
+      - src/feature_engineering.py
+      - data/transformed/test_transformed.csv
+      - data/transformed/train_transformed.csv
+    outs:
+      - data/feature_engineered/test_feature_engineered.csv
+      - data/feature_engineered/train_feature_engineered.csv
+  model_training:
+    cmd: python src/model_training.py
+    deps:
+      - src/model_training.py
+      - data/feature_engineered/test_feature_engineered.csv
+      - data/feature_engineered/train_feature_engineered.csv
+    outs:
+      - models/model.pkl
+  model_evaluation:
+    cmd: python src/model_evaluation.py
+    deps:
+      - src/model_evaluation.py
+      - models/model.pkl
+      - data/feature_engineered/test_feature_engineered.csv
+    outs:
+      - results/evaluation_results.json

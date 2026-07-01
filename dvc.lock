@@ -1,0 +1,70 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python src/data_ingestion.py
+    deps:
+    - path: experiments/spam.csv
+      hash: md5
+      md5: 008dcf9ca6aab621d3b3831db6815867
+      size: 503663
+    - path: src/data_ingestion.py
+      hash: md5
+      md5: 40b81fd1b4516d7c2b14a386a39c6c40
+      size: 2915
+    outs:
+    - path: data/raw/test.csv
+      hash: md5
+      md5: 39c4190cf56ca32d179558dae1ce5e02
+      size: 85101
+    - path: data/raw/train.csv
+      hash: md5
+      md5: ce89ed74bdc39f6ce316bcee1534bf95
+      size: 347608
+  transform:
+    cmd: python src/transform.py
+    deps:
+    - path: data/raw/test.csv
+      hash: md5
+      md5: 39c4190cf56ca32d179558dae1ce5e02
+      size: 85101
+    - path: data/raw/train.csv
+      hash: md5
+      md5: ce89ed74bdc39f6ce316bcee1534bf95
+      size: 347608
+    - path: src/transform.py
+      hash: md5
+      md5: 2fed676e443894a6447aa5dd7be9ff63
+      size: 2726
+    outs:
+    - path: data/transformed/test_transformed.csv
+      hash: md5
+      md5: 19950ef21744d7a60ffe87fa5dcecb54
+      size: 49808
+    - path: data/transformed/train_transformed.csv
+      hash: md5
+      md5: d6ea0ce490b6f471bf9dddbce53d3025
+      size: 203714
+  feature_engineering:
+    cmd: python src/feature_engineering.py
+    deps:
+    - path: data/transformed/test_transformed.csv
+      hash: md5
+      md5: 19950ef21744d7a60ffe87fa5dcecb54
+      size: 49808
+    - path: data/transformed/train_transformed.csv
+      hash: md5
+      md5: d6ea0ce490b6f471bf9dddbce53d3025
+      size: 203714
+    - path: src/feature_engineering.py
+      hash: md5
+      md5: 608cc67428ad5115a0f3b2f17c60e71d
+      size: 3445
+    outs:
+    - path: data/feature_engineered/test_feature_engineered.csv
+      hash: md5
+      md5: beefd31485a08277d1274d75fdcaafd5
+      size: 363577
+    - path: data/feature_engineered/train_feature_engineered.csv
+      hash: md5
+      md5: ddebb26563cded4c33dc8f44f33516bd
+      size: 1463309

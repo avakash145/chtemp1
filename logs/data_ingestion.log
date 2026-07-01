@@ -4,3 +4,6 @@
 2026-07-01 15:44:10,077 - data_ingestion-DEBUG-Data loaded from ../experiments/spam.csv
 2026-07-01 15:44:10,093 - data_ingestion-DEBUG-Data preprocessing complete
 2026-07-01 15:44:10,125 - data_ingestion-DEBUG-train and test data saved to dir: ../data\raw 
+2026-07-01 18:01:11,404 - data_ingestion-DEBUG-Data loaded from experiments/spam.csv
+2026-07-01 18:01:11,409 - data_ingestion-DEBUG-Data preprocessing complete
+2026-07-01 18:01:11,428 - data_ingestion-DEBUG-train and test data saved to dir: data\raw 

@@ -17,3 +17,8 @@
 2026-07-01 16:23:19,030 - feature_engineering - DEBUG - TF-IDF vectorization applied to text column
 2026-07-01 16:23:19,224 - feature_engineering - DEBUG - Data saved to ../data/feature_engineered/train_feature_engineered.csv
 2026-07-01 16:23:19,272 - feature_engineering - DEBUG - Data saved to ../data/feature_engineered/test_feature_engineered.csv
+2026-07-01 18:02:30,911 - feature_engineering - DEBUG - Data loaded from data/transformed/train_transformed.csv
+2026-07-01 18:02:30,925 - feature_engineering - DEBUG - Data loaded from data/transformed/test_transformed.csv
+2026-07-01 18:02:31,007 - feature_engineering - DEBUG - TF-IDF vectorization applied to text column
+2026-07-01 18:02:31,200 - feature_engineering - DEBUG - Data saved to data/feature_engineered/train_feature_engineered.csv
+2026-07-01 18:02:31,252 - feature_engineering - DEBUG - Data saved to data/feature_engineered/test_feature_engineered.csv
