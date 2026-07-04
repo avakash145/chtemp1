@@ -110,16 +110,13 @@ def main():
         
         results_path = "results/evaluation_results.json"
         os.makedirs(os.path.dirname(results_path), exist_ok=True)
-        with Live(save_dvc_exp=True) as live:
-            live.log_metric("report:",evaluation_results['classification_report'])
-            live.log_metric("accuracy",evaluation_results['accuracy'])
-            live.log_metric("confusion metrics",evaluation_results['confusion_matrix'])
-            live.log_metric("roc_auc", evaluation_results["roc_auc"])
-            
-            live.log_params(params)
         with open(results_path, 'w') as f:
             json.dump(evaluation_results, f, indent=4)
         logger.debug(f"Evaluation results saved successfully to {results_path}")
+        with Live(save_dvc_exp=True) as live:
+            live.log_artifact(results_path,type="parameters", name="my_run_config")
+            
+            live.log_params(params)
     except Exception as e:
         logger.error(f"Error in main execution: {e}")
         raise

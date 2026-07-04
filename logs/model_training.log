@@ -31,3 +31,15 @@
 2026-07-04 12:41:57,370 - model_training - DEBUG - Starting model training with 4135 samples
 2026-07-04 12:41:57,510 - model_training - INFO - Model training completed successfully
 2026-07-04 12:41:57,515 - model_training - DEBUG - Model saved successfully to models/model.pkl
+2026-07-04 13:16:14,467 - model_training - DEBUG - params loaded from params.yaml
+2026-07-04 13:16:14,504 - model_training - INFO - Data loaded successfully from data/feature_engineered/train_feature_engineered.csv
+2026-07-04 13:16:14,511 - model_training - DEBUG - Initializing RandomForestClassifier with parameters: {'n_estimators': 25, 'random_state': 2}
+2026-07-04 13:16:14,512 - model_training - DEBUG - Starting model training with 4135 samples
+2026-07-04 13:16:14,689 - model_training - INFO - Model training completed successfully
+2026-07-04 13:16:14,702 - model_training - DEBUG - Model saved successfully to models/model.pkl
+2026-07-04 13:26:47,441 - model_training - DEBUG - params loaded from params.yaml
+2026-07-04 13:26:47,480 - model_training - INFO - Data loaded successfully from data/feature_engineered/train_feature_engineered.csv
+2026-07-04 13:26:47,484 - model_training - DEBUG - Initializing RandomForestClassifier with parameters: {'n_estimators': 25, 'random_state': 2}
+2026-07-04 13:26:47,484 - model_training - DEBUG - Starting model training with 4135 samples
+2026-07-04 13:26:47,667 - model_training - INFO - Model training completed successfully
+2026-07-04 13:26:47,671 - model_training - DEBUG - Model saved successfully to models/model.pkl

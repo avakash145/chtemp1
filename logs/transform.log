@@ -8,3 +8,5 @@
 2026-07-02 00:31:23,746 - transforms - INFO - text column transformed in both train and test data and saved to data/transformed
 2026-07-04 12:32:10,176 - transforms - INFO - data loaded from data/raw/train.csv and data/raw/test.csv
 2026-07-04 12:34:10,392 - transforms - INFO - text column transformed in both train and test data and saved to data/transformed
+2026-07-04 13:14:42,175 - transforms - INFO - data loaded from data/raw/train.csv and data/raw/test.csv
+2026-07-04 13:16:06,662 - transforms - INFO - text column transformed in both train and test data and saved to data/transformed

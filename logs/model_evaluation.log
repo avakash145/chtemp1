@@ -18,3 +18,21 @@
 2026-07-04 12:42:02,470 - model_evaluation - DEBUG - Starting model evaluation on 1034 samples
 2026-07-04 12:42:02,528 - model_evaluation - INFO - Model evaluation completed successfully with accuracy: 0.9216634429400387, ROC AUC: 0.8769733436853001
 2026-07-04 12:42:02,531 - model_evaluation - DEBUG - Evaluation results saved successfully to results/evaluation_results.json
+2026-07-04 13:16:18,905 - model_evaluation - DEBUG - Parameters loaded successfully from params.yaml
+2026-07-04 13:16:19,205 - model_evaluation - DEBUG - Model loaded successfully from models/model.pkl
+2026-07-04 13:16:19,227 - model_evaluation - DEBUG - Data loaded successfully from data/feature_engineered/test_feature_engineered.csv
+2026-07-04 13:16:19,229 - model_evaluation - DEBUG - Starting model evaluation on 1034 samples
+2026-07-04 13:16:19,265 - model_evaluation - INFO - Model evaluation completed successfully with accuracy: 0.9516441005802708, ROC AUC: 0.956157802795031
+2026-07-04 13:16:20,017 - model_evaluation - ERROR - Error in main execution: Data 'report:' has not supported type <class 'dict'>
+2026-07-04 13:22:45,204 - model_evaluation - DEBUG - Parameters loaded successfully from params.yaml
+2026-07-04 13:22:45,460 - model_evaluation - DEBUG - Model loaded successfully from models/model.pkl
+2026-07-04 13:22:45,470 - model_evaluation - DEBUG - Data loaded successfully from data/feature_engineered/test_feature_engineered.csv
+2026-07-04 13:22:45,474 - model_evaluation - DEBUG - Starting model evaluation on 1034 samples
+2026-07-04 13:22:45,511 - model_evaluation - INFO - Model evaluation completed successfully with accuracy: 0.9516441005802708, ROC AUC: 0.956157802795031
+2026-07-04 13:22:45,514 - model_evaluation - DEBUG - Evaluation results saved successfully to results/evaluation_results.json
+2026-07-04 13:26:51,930 - model_evaluation - DEBUG - Parameters loaded successfully from params.yaml
+2026-07-04 13:26:52,175 - model_evaluation - DEBUG - Model loaded successfully from models/model.pkl
+2026-07-04 13:26:52,208 - model_evaluation - DEBUG - Data loaded successfully from data/feature_engineered/test_feature_engineered.csv
+2026-07-04 13:26:52,210 - model_evaluation - DEBUG - Starting model evaluation on 1034 samples
+2026-07-04 13:26:52,245 - model_evaluation - INFO - Model evaluation completed successfully with accuracy: 0.9535783365570599, ROC AUC: 0.9601004464285714
+2026-07-04 13:26:52,247 - model_evaluation - DEBUG - Evaluation results saved successfully to results/evaluation_results.json
