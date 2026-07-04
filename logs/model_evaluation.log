@@ -36,3 +36,42 @@
 2026-07-04 13:26:52,210 - model_evaluation - DEBUG - Starting model evaluation on 1034 samples
 2026-07-04 13:26:52,245 - model_evaluation - INFO - Model evaluation completed successfully with accuracy: 0.9535783365570599, ROC AUC: 0.9601004464285714
 2026-07-04 13:26:52,247 - model_evaluation - DEBUG - Evaluation results saved successfully to results/evaluation_results.json
+2026-07-04 15:55:35,794 - model_evaluation - DEBUG - Parameters loaded successfully from params.yaml
+2026-07-04 15:55:36,733 - model_evaluation - DEBUG - Model loaded successfully from models/model.pkl
+2026-07-04 15:55:36,773 - model_evaluation - DEBUG - Data loaded successfully from data/feature_engineered/test_feature_engineered.csv
+2026-07-04 15:55:36,779 - model_evaluation - DEBUG - Starting model evaluation on 1034 samples
+2026-07-04 15:55:36,816 - model_evaluation - INFO - Model evaluation completed successfully with accuracy: 0.9535783365570599, ROC AUC: 0.9601004464285714
+2026-07-04 15:55:36,818 - model_evaluation - DEBUG - Evaluation results saved successfully to results/evaluation_results.json
+2026-07-04 15:59:43,939 - model_evaluation - DEBUG - Parameters loaded successfully from params.yaml
+2026-07-04 15:59:44,123 - model_evaluation - DEBUG - Model loaded successfully from models/model.pkl
+2026-07-04 15:59:44,131 - model_evaluation - DEBUG - Data loaded successfully from data/feature_engineered/test_feature_engineered.csv
+2026-07-04 15:59:44,134 - model_evaluation - DEBUG - Starting model evaluation on 1034 samples
+2026-07-04 15:59:44,157 - model_evaluation - INFO - Model evaluation completed successfully with accuracy: 0.9535783365570599, ROC AUC: 0.9601004464285714
+2026-07-04 15:59:44,159 - model_evaluation - DEBUG - Evaluation results saved successfully to results/evaluation_results.json
+2026-07-04 15:59:44,782 - model_evaluation - ERROR - Error in main execution: Data 'confusion_matrix' has not supported type <class 'list'>
+2026-07-04 16:05:21,884 - model_evaluation - DEBUG - Parameters loaded successfully from params.yaml
+2026-07-04 16:05:22,068 - model_evaluation - DEBUG - Model loaded successfully from models/model.pkl
+2026-07-04 16:05:22,078 - model_evaluation - DEBUG - Data loaded successfully from data/feature_engineered/test_feature_engineered.csv
+2026-07-04 16:05:22,080 - model_evaluation - DEBUG - Starting model evaluation on 1034 samples
+2026-07-04 16:05:22,107 - model_evaluation - INFO - Model evaluation completed successfully with accuracy: 0.9535783365570599, ROC AUC: 0.9601004464285714
+2026-07-04 16:05:22,108 - model_evaluation - DEBUG - Evaluation results saved successfully to results/evaluation_results.json
+2026-07-04 16:05:22,661 - model_evaluation - ERROR - Error in main execution: Data '{'accuracy': 0.9535783365570599, 'roc_auc': 0.9601004464285714, 'confusion_matrix': [[877, 19], [29, 109]], 'classification_report': {'0': {'precision': 0.9679911699779249, 'recall': 0.9787946428571429, 'f1-score': 0.9733629300776915, 'support': 896.0}, '1': {'precision': 0.8515625, 'recall': 0.7898550724637681, 'f1-score': 0.8195488721804511, 'support': 138.0}, 'accuracy': 0.9535783365570599, 'macro avg': {'precision': 0.9097768349889624, 'recall': 0.8843248576604554, 'f1-score': 0.8964559011290714, 'support': 1034.0}, 'weighted avg': {'precision': 0.9524523339460549, 'recall': 0.9535783365570599, 'f1-score': 0.9528345548457582, 'support': 1034.0}}}' has not supported type <class 'dict'>
+2026-07-04 16:18:09,968 - model_evaluation - DEBUG - Parameters loaded successfully from params.yaml
+2026-07-04 16:18:10,198 - model_evaluation - DEBUG - Model loaded successfully from models/model.pkl
+2026-07-04 16:18:10,206 - model_evaluation - DEBUG - Data loaded successfully from data/feature_engineered/test_feature_engineered.csv
+2026-07-04 16:18:10,209 - model_evaluation - DEBUG - Starting model evaluation on 1034 samples
+2026-07-04 16:18:10,238 - model_evaluation - INFO - Model evaluation completed successfully with accuracy: 0.9535783365570599, ROC AUC: 0.9601004464285714
+2026-07-04 16:18:10,240 - model_evaluation - DEBUG - Evaluation results saved successfully to results/evaluation_results.json
+2026-07-04 16:18:10,704 - model_evaluation - ERROR - Error in main execution: Data 'classification_report' has not supported type <class 'dict'>
+2026-07-04 16:19:37,312 - model_evaluation - DEBUG - Parameters loaded successfully from params.yaml
+2026-07-04 16:19:37,463 - model_evaluation - DEBUG - Model loaded successfully from models/model.pkl
+2026-07-04 16:19:37,470 - model_evaluation - DEBUG - Data loaded successfully from data/feature_engineered/test_feature_engineered.csv
+2026-07-04 16:19:37,473 - model_evaluation - DEBUG - Starting model evaluation on 1034 samples
+2026-07-04 16:19:37,498 - model_evaluation - INFO - Model evaluation completed successfully with accuracy: 0.9535783365570599, ROC AUC: 0.9601004464285714
+2026-07-04 16:19:37,500 - model_evaluation - DEBUG - Evaluation results saved successfully to results/evaluation_results.json
+2026-07-04 16:22:06,689 - model_evaluation - DEBUG - Parameters loaded successfully from params.yaml
+2026-07-04 16:22:06,895 - model_evaluation - DEBUG - Model loaded successfully from models/model.pkl
+2026-07-04 16:22:06,914 - model_evaluation - DEBUG - Data loaded successfully from data/feature_engineered/test_feature_engineered.csv
+2026-07-04 16:22:06,917 - model_evaluation - DEBUG - Starting model evaluation on 1034 samples
+2026-07-04 16:22:06,945 - model_evaluation - INFO - Model evaluation completed successfully with accuracy: 0.9487427466150871, ROC AUC: 0.945506599378882
+2026-07-04 16:22:06,946 - model_evaluation - DEBUG - Evaluation results saved successfully to results/evaluation_results.json

@@ -48,9 +48,14 @@ stages:
     - data/feature_engineered/test_feature_engineered.csv
     outs:
     - results/evaluation_results.json
-params:
-- dvclive/params.yaml
 artifacts:
   my_run_config:
     path: results/evaluation_results.json
     type: parameters
+params:
+- dvclive/params.yaml
+metrics:
+- dvclive/metrics.json
+plots:
+- dvclive/plots/metrics:
+    x: step

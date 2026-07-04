@@ -1,1 +1,5 @@
-{}
+{
+        "classification_report": "              precision    recall  f1-score   support\n\n           0       0.97      0.98      0.97       896\n           1       0.83      0.78      0.80       138\n\n    accuracy                           0.95      1034\n   macro avg       0.90      0.88      0.89      1034\nweighted avg       0.95      0.95      0.95      1034\n",
+    "accuracy": 0.9487427466150871,
+    "roc_auc": 0.945506599378882
+}

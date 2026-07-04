@@ -80,7 +80,7 @@ def evaluate_model(model, X_test:np.ndarray, y_test:np.ndarray)->dict:
         accuracy = accuracy_score(y_test, y_pred)
         roc_auc = roc_auc_score(y_test, model.predict_proba(X_test)[:, 1])
         conf_matrix = confusion_matrix(y_test, y_pred)
-        class_report = classification_report(y_test, y_pred, output_dict=True)
+        class_report = classification_report(y_test, y_pred)
         
         logger.info(f"Model evaluation completed successfully with accuracy: {accuracy}, ROC AUC: {roc_auc}")
         
@@ -114,7 +114,9 @@ def main():
             json.dump(evaluation_results, f, indent=4)
         logger.debug(f"Evaluation results saved successfully to {results_path}")
         with Live(save_dvc_exp=True) as live:
-            live.log_artifact(results_path,type="parameters", name="my_run_config")
+            live.log_metric("classification_report",evaluation_results['classification_report'])
+            live.log_metric("accuracy",evaluation_results['accuracy'])
+            live.log_metric("roc_auc",evaluation_results['roc_auc'])
             
             live.log_params(params)
     except Exception as e:

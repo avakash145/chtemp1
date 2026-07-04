@@ -19,4 +19,8 @@ setting up dvc pipline
 experiments with dvc:
 12. pip install dvclive
 13. add the dvclive code_block
-14.
+14. Do "dvc exp run" it will create a new dvc.yaml(if already not there) and dvclive directory (each run will be considered as an experiment)
+15. Do "dvc exp show" on terminal to see the experiments or use extenstion on vscode(install dvc extenstion)
+16. Do "dvc exp remove {exp-name}" to remove exp (optional) | "dvc exp apply {exp-name}" to reproduce previous experiment(instead of tracking down the last parameters)
+17. change params, re-run code (produce new experiments)
+18. now git add commit push

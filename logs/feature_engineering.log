@@ -50,3 +50,9 @@
 2026-07-04 13:26:42,400 - feature_engineering - DEBUG - TF-IDF vectorization applied to text column
 2026-07-04 13:26:42,579 - feature_engineering - DEBUG - Data saved to data/feature_engineered/train_feature_engineered.csv
 2026-07-04 13:26:42,629 - feature_engineering - DEBUG - Data saved to data/feature_engineered/test_feature_engineered.csv
+2026-07-04 16:21:58,381 - feature_engineering - DEBUG - Parameters of feature_engineering Loaded from params.yaml
+2026-07-04 16:21:58,401 - feature_engineering - DEBUG - Data loaded from data/transformed/train_transformed.csv
+2026-07-04 16:21:58,415 - feature_engineering - DEBUG - Data loaded from data/transformed/test_transformed.csv
+2026-07-04 16:21:58,471 - feature_engineering - DEBUG - TF-IDF vectorization applied to text column
+2026-07-04 16:21:58,567 - feature_engineering - DEBUG - Data saved to data/feature_engineered/train_feature_engineered.csv
+2026-07-04 16:21:58,593 - feature_engineering - DEBUG - Data saved to data/feature_engineered/test_feature_engineered.csv
