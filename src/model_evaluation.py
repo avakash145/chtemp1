@@ -4,6 +4,9 @@ import pandas as pd
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score,roc_auc_score,roc_curve
 import logging
 import pickle
+import yaml
+import dvclive
+from dvclive import Live
 import json
 
 
@@ -22,6 +25,25 @@ filehandler.setFormatter(formatter)
 consolehandler.setFormatter(formatter)
 logger.addHandler(filehandler)
 logger.addHandler(consolehandler)
+
+def load_params(file_path:str)->dict:
+    try:
+        with open(file_path,'r') as f:
+            params=yaml.safe_load(f)
+            logger.debug(f"Parameters loaded successfully from {file_path}")
+            return params
+    except FileNotFoundError:
+        logger.error(f"File not found: {file_path}")
+        raise
+    except yaml.YAMLError as e:
+        logger.error(f"Error parsing YAML file {file_path}: {e}")
+        raise
+    except Exception as e:
+        logger.error(f"Error loading parameters from {file_path}: {e}")
+        raise
+
+
+
 
 def load_model(file_path:str)->pd.DataFrame:
     try:
@@ -76,6 +98,8 @@ def evaluate_model(model, X_test:np.ndarray, y_test:np.ndarray)->dict:
 def main():
     try:
         model_path = "models/model.pkl"
+        params_path = "params.yaml"
+        params=load_params(params_path)
         test_data_path = "data/feature_engineered/test_feature_engineered.csv"
         model = load_model(model_path)
         test_data = load_data(test_data_path)
@@ -86,6 +110,13 @@ def main():
         
         results_path = "results/evaluation_results.json"
         os.makedirs(os.path.dirname(results_path), exist_ok=True)
+        with Live(save_dvc_exp=True) as live:
+            live.log_metric("report:",evaluation_results['classification_report'])
+            live.log_metric("accuracy",evaluation_results['accuracy'])
+            live.log_metric("confusion metrics",evaluation_results['confusion_matrix'])
+            live.log_metric("roc_auc", evaluation_results["roc_auc"])
+            
+            live.log_params(params)
         with open(results_path, 'w') as f:
             json.dump(evaluation_results, f, indent=4)
         logger.debug(f"Evaluation results saved successfully to {results_path}")

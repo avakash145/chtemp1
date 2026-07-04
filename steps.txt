@@ -15,3 +15,8 @@ setting up dvc pipline
 9. add the params setup mentioned below
 10. do dvc repro again to test the pipeline along with the params 
 11. now git add commit push 
+
+experiments with dvc:
+12. pip install dvclive
+13. add the dvclive code_block
+14.
