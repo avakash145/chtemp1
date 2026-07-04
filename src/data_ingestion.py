@@ -2,6 +2,7 @@ import os
 import logging
 import pandas as pd
 from sklearn.model_selection import train_test_split
+import yaml
 from sklearn.preprocessing import LabelEncoder
 lblencoder=LabelEncoder()
 logs_dir='logs'
@@ -23,6 +24,22 @@ filehandler.setFormatter(formatter)
 logger.addHandler(console_handler)
 logger.addHandler(filehandler)
 
+def load_params(params_path:str)->dict:
+    '''Load parameters from a yaml file.'''
+    try:
+        with open(params_path) as f:
+            params=yaml.safe_load(f)
+            logger.debug('Parameters loaded from %s',params_path)
+            return params
+    except FileNotFoundError as e:
+        logger.error(f'File not found: {e}')
+        raise
+    except yaml.YAMLError as e:
+        logger.error(f'Error parsing YAML file: {e}')
+        raise
+    except Exception as e:
+        logger.error(f'Unexpected error while loading parameters: {e}')
+        raise
 
 
 
@@ -69,7 +86,8 @@ def save_data(train_data:pd.DataFrame,test_data:pd.DataFrame,data_path:str)->Non
 
 def main():
     try:
-        test_size=0.2
+        params_path='params.yaml'
+        test_size=load_params(params_path)['data_ingestion']['test_size']
         data_path='experiments/spam.csv'
         # df=load_data(data_url=data_path)  where data path is the url to the data 
         df=load_data(data_path)

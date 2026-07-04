@@ -9,3 +9,9 @@ setting up dvc pipeline (without params)
 5. create dvc.yaml file and add stages to it 
 6. dvc init then do dvc repro to test the pipeline automation. (check dvc dag)
 7. now git add, commit, push 
+
+setting up dvc pipline 
+8. add params.yaml file 
+9. add the params setup mentioned below
+10. do dvc repro again to test the pipeline along with the params 
+11. now git add commit push 

@@ -13,6 +13,8 @@ stages:
       - src/transform.py
       - data/raw/test.csv
       - data/raw/train.csv
+    params:
+      - data_ingestion.test_size
     outs:
       - data/transformed/test_transformed.csv
       - data/transformed/train_transformed.csv
@@ -22,11 +24,16 @@ stages:
       - src/feature_engineering.py
       - data/transformed/test_transformed.csv
       - data/transformed/train_transformed.csv
+    params:
+      - feature_engineering.max_features
     outs:
       - data/feature_engineered/test_feature_engineered.csv
       - data/feature_engineered/train_feature_engineered.csv
   model_training:
     cmd: python src/model_training.py
+    params:
+      - model_building.estimators
+      - model_building.random_state
     deps:
       - src/model_training.py
       - data/feature_engineered/test_feature_engineered.csv

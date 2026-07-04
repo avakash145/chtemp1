@@ -10,3 +10,7 @@
 2026-07-02 00:30:15,050 - data_ingestion-DEBUG-Data loaded from experiments/spam.csv
 2026-07-02 00:30:15,057 - data_ingestion-DEBUG-Data preprocessing complete
 2026-07-02 00:30:15,091 - data_ingestion-DEBUG-train and test data saved to dir: data\raw 
+2026-07-04 12:32:03,714 - data_ingestion-DEBUG-Parameters loaded from params.yaml
+2026-07-04 12:32:03,780 - data_ingestion-DEBUG-Data loaded from experiments/spam.csv
+2026-07-04 12:32:03,808 - data_ingestion-DEBUG-Data preprocessing complete
+2026-07-04 12:32:03,845 - data_ingestion-DEBUG-train and test data saved to dir: data\raw 

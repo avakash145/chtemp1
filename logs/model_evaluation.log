@@ -13,3 +13,8 @@
 2026-07-02 00:31:34,024 - model_evaluation - DEBUG - Starting model evaluation on 1034 samples
 2026-07-02 00:31:34,060 - model_evaluation - INFO - Model evaluation completed successfully with accuracy: 0.9555125725338491, ROC AUC: 0.9597809912008282
 2026-07-02 00:31:34,063 - model_evaluation - DEBUG - Evaluation results saved successfully to results/evaluation_results.json
+2026-07-04 12:42:02,426 - model_evaluation - DEBUG - Model loaded successfully from models/model.pkl
+2026-07-04 12:42:02,467 - model_evaluation - DEBUG - Data loaded successfully from data/feature_engineered/test_feature_engineered.csv
+2026-07-04 12:42:02,470 - model_evaluation - DEBUG - Starting model evaluation on 1034 samples
+2026-07-04 12:42:02,528 - model_evaluation - INFO - Model evaluation completed successfully with accuracy: 0.9216634429400387, ROC AUC: 0.8769733436853001
+2026-07-04 12:42:02,531 - model_evaluation - DEBUG - Evaluation results saved successfully to results/evaluation_results.json
